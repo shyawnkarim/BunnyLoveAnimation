@@ -1,0 +1,137 @@
+/* CSS Animation - A love story */
+/* Setup */
+/* the CSS to apply the "sayClick" keyframe animation to the header>p */
+header>p {
+	-webkit-animation:sayClick 6s ease-in;
+}
+
+/* Setup Keyframes */ 
+@-webkit-keyframes sayClick{
+	  0%{-webkit-transform: translateX(250px);opacity:0;}
+	 30%{-webkit-transform: translateX(0);opacity:1;}
+	 50%{opacity:.3;color:#a01515;}
+	 70%{opacity:1;color:#a01515;}
+	 90%{opacity:.2;color:#a01515;}
+	100%{opacity:1;}
+}
+
+
+/* Scene 1 */
+/* write CSS to apply the "enterBunny" keyframe animation  to the #bunny in .scene_1 */
+.scene_1 #bunny{
+	-webkit-animation:enterBunny 8s ease-in;
+	-webkit-animation-fill-mode: forwards; /* Final bunny position */
+}
+/* write CSS using the "zoomIn" keyframe animation on body.scene_1 */
+body.scene_1 {
+	-webkit-animation:zoomIn 8s ease-in-out;
+	-webkit-animation-fill-mode: forwards;
+}
+/* write CSS to apply the "ask" keyframe animation to #question in .scene_1 */
+.scene_1 #question{
+	-webkit-animation: ask 8s ease-in-out;
+	-webkit-animation-fill-mode: forwards;
+}
+/* write CSS to apply the "respond" keyframe animation to #reply in .scene_1 */
+.scene_1 #reply{
+	-webkit-animation: respond 8s ease;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/* Scene 1 Keyframes */
+@-webkit-keyframes enterBunny{
+	 0%{-webkit-transform: translate(0);}
+	10%{-webkit-transform: translate(-50px,-200px);}
+	25%{-webkit-transform: translate(-50px,-200px);}
+	30%{-webkit-transform: translate(30px, -300px);}
+	35%{-webkit-transform: translate(-60px, -350px);}
+	100%{-webkit-transform: translate(-60px, -350px);}
+}
+@-webkit-keyframes zoomIn{
+	35%{-webkit-transform:scale(1); -webkit-transform-origin:center;}
+	45%{-webkit-transform:scale(1.7); -webkit-transform-origin: 85% 60%;}
+	100%{-webkit-transform:scale(1.7); -webkit-transform-origin: 85% 60%;}
+}
+@-webkit-keyframes ask{
+	50%{opacity: 0;}
+	60%{opacity: 1;}
+	75%{opacity: 1;}
+	90%{opacity: 0;}
+	100%{opacity: 0;}
+}
+@-webkit-keyframes respond{
+	75%{-webkit-transform: translate(0,0); opacity: 0}
+	95%{-webkit-transform: translate(-110px,0px); opacity: 1}
+	100%{-webkit-transform: translate(-110px,0px); opacity: 1}
+}
+
+/* Scene 2*/
+/* write CSS using the "responded" keyframe animation to make the #reply disappear in .scene_2 */
+.scene_2 #reply{
+	-webkit-animation: responded 10s;
+	-webkit-animation-fill-mode: forwards;
+}
+/* write CSS using the "zoomOut" keyframe animation on body.scene_2 */
+body.scene_2{
+	-webkit-animation: zoomOut 10s;
+}
+
+/* write CSS using the "heartJoy" keyframe animation to make #heart grow huge in .scene_2 */
+.scene_2 #heart{
+	-webkit-animation: heartJoy 10s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/* write CSS using the "together" keyframe animation to move #bunny close to the valentine in .scene_2 */
+.scene_2 #bunny{
+	-webkit-animation: together 10s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/* work out the CSS and keyframe you need to get the sun to shine at the end */
+.scene_2 #sunshine{
+	width: 50%;
+	-webkit-animation: sunshine 10s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/* Scene 2 Keyframes */
+@-webkit-keyframes responded{
+	0%{-webkit-transform: translate(-110px,0px) opacity:1;}
+	10%{-webkit-transform: translate(0,0); opacity: 0;}
+	100%{-webkit-transform: translate(0,0); opacity: 0;}
+}
+@-webkit-keyframes zoomOut{
+	0%{-webkit-transform: scale(1.7); -webkit-transform-origin: 85% 60%;}
+	20%{-webkit-transform: scale(1.7); -webkit-transform-origin: 85% 60%;}
+	80%{-webkit-transform: scale(1); -webkit-transform-origin: center;}
+	100%{-webkit-transform: scale(1); -webkit-transform-origin: center;}
+
+}
+@-webkit-keyframes together{
+	0%{-webkit-transform: translate(-60px,-350px);}
+	20%{-webkit-transform: translate(-60px,-350px);} 
+	25%{-webkit-transform: translate(-95px,-360px);} 
+	50%{-webkit-transform: translate(-95px,-360px);}
+	55%{-webkit-transform: translate(-140px,-410px);}
+	60%{-webkit-transform: translate(-215px,-395px);} 
+	100%{-webkit-transform: translate(-215px,-395px);}
+}
+@-webkit-keyframes heartJoy{
+	0%{opacity: 0;}
+	10% {-webkit-transform: translate(60px,-20px); opacity: 1;}
+	15% {-webkit-transform: translate(60px,-20px) scale(1.5,.7); opacity: 1;}
+	20% {-webkit-transform: translate(60px,-20px) scale(1.2); opacity: 1;} 
+	50% {opacity: .75;}
+	75% {-webkit-transform: translate(208px,-413px) scale(5); opacity: .5;} 
+	100% {-webkit-transform: translate(208px,-413px) scale(7); opacity: 0;}
+}
+@-webkit-keyframes sunshine{
+	0%{-webkit-transform: translateX(0);}
+	50%{-webkit-transform: translateX(0);}
+	70%{-webkit-transform: translateX(-450px);}
+	100%{-webkit-transform: translateX(-370px);}
+}
+
+
+
